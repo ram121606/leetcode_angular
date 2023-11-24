@@ -1,0 +1,23 @@
+<body class="main_container">
+    <div class = "input">
+        <mat-form-field appearance="outline">
+            <input matInput type="text" [(ngModel)]="username" [formControl]="lt_name" placeholder="Enter the username" required>
+            <mat-error *ngIf="lt_name.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <button type="submit" mat-raised-button [disabled]="(lt_name.valid == true)?false:true" (click)="onClick()">Get</button>
+    </div>
+    <div *ngIf="result">
+        
+        Username : {{result.username}} <br><br>
+        Rank : {{result.rank}}<br><br>
+        Languages Used : {{result.languages_used}} <br><br>
+        Contest Rating : {{result.contest_rating}} <br><br>
+        Global Ranking : {{result.globa_ranking}} <br><br>
+        No of contests attended : {{result.no_of_contests_attended}} <br><br>
+        Easy Solved Count : {{result.easy_solved}} <br><br>
+        Medium Solved Count : {{result.medium_solved}} <br><br>
+        Hard Solved Count : {{result.hard_solved}} <br><br>
+        Total Solved Count : {{result.total_no_of_problems_solved}} <br>
+
+    </div>
+</body>
