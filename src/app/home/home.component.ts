@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import {Validators, FormControl} from '@angular/forms'
 import {HttpClient} from '@angular/common/http'
-import {environment} from '../../environments/environment'
+import {environment} from '../../environments/environment.development'
+import { KeyValue } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -27,6 +28,10 @@ export class HomeComponent{
   //   })
   // }
 
+  originalOrder = (a:KeyValue<string,any>, b:KeyValue<string,any>):number =>{
+    return 0;
+  }
+  
   getErrorMessage(){
     if(this.lt_name.hasError('required')){
       return "Username cannot be empty"
