@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Validators, FormControl} from '@angular/forms'
 import {HttpClient} from '@angular/common/http'
-import {environment} from '../../environments/environment.development'
+import {environment} from '../../environments/environment'
 import { KeyValue } from '@angular/common';
 
 @Component({
