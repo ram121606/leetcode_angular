@@ -1,3 +1,3 @@
 export const environment = {
-    BACKEND_URL : 'https://ram-leetcode.cyclic.app/'
+    BACKEND_URL : 'https://leetcode.cyclic.app/'
 };
